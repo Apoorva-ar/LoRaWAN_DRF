@@ -1,0 +1,51 @@
+﻿>>anaconda
+>>pip install simpy
+>>python results.py to run
+
+>> stores results in file:  exp_results1
+Randomization algo ; beacon tx is activated for all gateways with a pre defined probablity 
+(common for all gws) in main.py 
+It deals with randomizing beacon tx among gateways, network wide-> all gateways involved over time
+
+# usage
+set ADR=0 in main.py
+set p array
+and run 
+
+>DRF Algo
+
+#usage
+>set ADR=1 in main.py
+
+
+
+
+To experiment with different number of nodes:
+>change in main.py 
+1)coordED_20 to coordED_50 or coordED_100
+2)change nrNodes 
+coordinates of the ED are fixed specified in coordinates.py
+
+
+
+Power Consumption Values:
+Semtech SX1272 RF Tranceiver
+Operating Voltage 3.3V
+Current :
+Transmit Mode 14 dBm : 30mA
+              17dBm  : 90mA
+              20dBm  : 125mA
+Receiving Mode
+                LnaBoostOff: 10.5mA
+                LnaBoostOn : 11.2mA
+
+Preamble detection
+ED opens RX window for 2 symbols:
+Airtime for 2 preamble symbols  with foll configuration:
+SF=12
+BW=125KHz
+Airtime = 466.94 ms
+
+1 beacon miss
+ED opens window for extra 2 symbols
+Extra Energy = 16.95‬ mJ
